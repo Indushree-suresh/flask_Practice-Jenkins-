@@ -8,6 +8,7 @@ pipeline {
                 sh '''
                 python3 -m venv venv
                 . venv/bin/activate
+                pip install --upgrade pip
                 pip install -r requirements.txt
                 '''
             }
@@ -18,7 +19,7 @@ pipeline {
                 sh '''
                 . venv/bin/activate
                 pip install pytest
-                pytest || echo "No tests"
+                pytest || echo "No tests found"
                 '''
             }
         }
@@ -35,10 +36,10 @@ pipeline {
 
     post {
         success {
-            echo "Build Successful"
+            echo "Build Successful 🎉"
         }
         failure {
-            echo "Build Failed"
+            echo "Build Failed ❌"
         }
     }
 }
