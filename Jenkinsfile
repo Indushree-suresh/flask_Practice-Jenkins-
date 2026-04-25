@@ -3,18 +3,11 @@ pipeline {
 
     stages {
 
-        stage('Checkout') {
-            steps {
-                 git branch: 'main', url: 'https://github.com/Indushree-suresh/flask_Practice-Jenkins-.git'
-            }
-        }
-
         stage('Build') {
             steps {
                 sh '''
                 python3 -m venv venv
                 . venv/bin/activate
-                pip install --upgrade pip
                 pip install -r requirements.txt
                 '''
             }
@@ -25,7 +18,7 @@ pipeline {
                 sh '''
                 . venv/bin/activate
                 pip install pytest
-                pytest || echo "No tests found"
+                pytest || echo "No tests"
                 '''
             }
         }
@@ -42,10 +35,10 @@ pipeline {
 
     post {
         success {
-            echo "Build Successful "
+            echo "Build Successful"
         }
         failure {
-            echo "Build Failed "
+            echo "Build Failed"
         }
     }
 }
