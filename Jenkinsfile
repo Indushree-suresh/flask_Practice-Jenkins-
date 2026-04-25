@@ -5,7 +5,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git 'https://github.com/YOUR_USERNAME/flask_Practice.git'
+                git 'https://github.com/Indushree-suresh/flask_Practice-Jenkins-.git'
             }
         }
 
