@@ -25,11 +25,20 @@ pipeline {
         }
 
         stage('Deploy') {
-            steps {
-                sh '''
-                . venv/bin/activate
-                nohup python app.py > app.log 2>&1 &
-                '''
+    steps {
+        sh '''
+        pkill -f app.py || true
+        . venv/bin/activate
+        nohup python app.py > app.log 2>&1 &
+        sleep 5
+        '''
+    }
+}
+            
+               
+                
+                
+                
             }
         }
     }
