@@ -23,6 +23,17 @@ created Jenkinsfile
 builded 
 <img width="1853" height="920" alt="image" src="https://github.com/user-attachments/assets/8e77086e-faf2-43a8-bd01-b60d0d7415d4" />
 
+Webhook created
+<img width="1255" height="702" alt="image" src="https://github.com/user-attachments/assets/cf52b589-7f1a-4ebd-bbc4-4407a906b127" />
+
+
+webhook triggered
+<img width="1724" height="882" alt="image" src="https://github.com/user-attachments/assets/0fcec97f-cfcc-48c8-9bde-eb255257e24c" />
+
+Output
+Automated CI/CD pipeline using Jenkins
+Email notifications (Couldn't add as it was throughing error)
+Flask app deployed to staging
 
 
 
