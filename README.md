@@ -1,134 +1,28 @@
-# Student Registration System
+Jenkins CI/CD Pipeline for Flask Application
 
-A simple **Flask** web application to manage student records with **MongoDB** as the backend database. Users can **add, view, update, and delete** student details.
+Prerequisites
 
----
+Before setting up the pipeline, ensure:
 
-## Features
+Jenkins installed (local VM or cloud)
+Python (>=3.8) installed
+pip installed
+Git installed
+Jenkins installed:
+Pipeline Plugin
 
-* List all students on the home page
-* Add a new student
-* Update existing student details
-* Delete a student with confirmation
-* Simple and responsive UI using Bootstrap
+Jenkins is exposes and exposed at port 8080
 
----
+<img width="1852" height="928" alt="image" src="https://github.com/user-attachments/assets/c529f5ef-06c9-4b7d-953d-a590aea913d7" />
+<img width="1752" height="858" alt="image" src="https://github.com/user-attachments/assets/8ed7d413-4c07-44cd-8d32-ff6817977975" />
+<img width="1843" height="932" alt="image" src="https://github.com/user-attachments/assets/94117c50-ac9e-4904-9fa1-022ede341dfa" />
 
-## Tech Stack
+created Jenkinsfile
+<img width="1830" height="864" alt="image" src="https://github.com/user-attachments/assets/cde84a99-997b-4231-8cc7-4cd63405a1fa" />
 
-* **Backend:** Python, Flask
-* **Database:** MongoDB (via Flask-PyMongo)
-* **Frontend:** HTML, Jinja2 templates, Bootstrap 5
-* **Environment Variables:** Managed via `.env` file
+builded 
+<img width="1853" height="920" alt="image" src="https://github.com/user-attachments/assets/8e77086e-faf2-43a8-bd01-b60d0d7415d4" />
 
----
-
-## Setup Instructions
-
-### 1. Clone the repository
-
-```bash
-git clone <your-repo-url>
-cd <repo-folder>
-```
-
-### 2. Create and activate a virtual environment
-
-```bash
-python -m venv venv
-# Activate venv
-# Windows:
-venv\Scripts\activate
-# Linux / Mac:
-source venv/bin/activate
-```
-
-### 3. Install dependencies
-
-```bash
-pip install -r requirements.txt
-```
-
-**`requirements.txt` example:**
-
-```
-Flask
-Flask-PyMongo
-python-dotenv
-bson
-```
-
-### 4. Configure environment variables
-
-Create a `.env` file in the project root:
-
-```
-MONGO_URI=<your-mongodb-connection-string>
-SECRET_KEY=<your-secret-key>
-```
-
-### 5. Run the application
-
-```bash
-python app.py
-```
-
-Open your browser at: [http://localhost:8000](http://localhost:8000)
-
----
-
-## Project Structure
-
-```
-project/
-│
-├── templates/
-│   ├── base.html
-│   ├── index.html
-│   ├── add_student.html
-│   ├── update_student.html
-│
-├── app.py
-├── requirements.txt
-└── .env
-```
-
----
-
-## Screenshots
-
-**Home Page**
-Lists all students with Edit/Delete buttons.
-- <img width="1902" height="607" alt="image" src="https://github.com/user-attachments/assets/a58a6a6d-4978-4769-8074-232e4d31e69d" />
-
-
-**Add Student**
-Form to add a new student.
-- <img width="1897" height="801" alt="image" src="https://github.com/user-attachments/assets/d65d25c3-ebb5-410a-adb1-e130ad7c5878" />
-
-
-**Update Student**
-Form pre-filled with student details.
-- <img width="1905" height="897" alt="image" src="https://github.com/user-attachments/assets/04febf01-879f-431f-ab07-abcfb993acf1" />
-
-
-
----
-
-## Notes
-
-* Make sure MongoDB is running and accessible via the URI in `.env`
-* Delete action includes a confirmation page to prevent accidental deletion
-* Uses `ObjectId` from `bson` to work with MongoDB document IDs
-* If you use MongoDB Atlas on macOS, install dependencies again (`pip install -r requirements.txt`). This project now uses `certifi` CA bundle explicitly to avoid common TLS certificate verification failures with `pymongo`.
-
----
-
-## License
-
-MIT License
-
----
 
 
 
