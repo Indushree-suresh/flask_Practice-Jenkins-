@@ -1,8 +1,6 @@
 Jenkins CI/CD Pipeline for Flask Application
 
-Prerequisites
-
-Before setting up the pipeline, ensure:
+Before setting up the pipeline, 
 
 Jenkins installed (local VM or cloud)
 Python (>=3.8) installed
